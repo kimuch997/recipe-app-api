@@ -1,0 +1,4 @@
+#this file has custome step to our build to only install this dev requirements when we are building an image for our local dev server,as we dont need the flake 8 pckg when we are running our deployed application
+# best practice to separete our dvp dependancies from project dependancies
+flake8>=3.9.2,<3.10
+# 
