@@ -21,7 +21,7 @@ class CommandTests(SimpleTestCase):
         
     @patch('core.management.commands.wait_for_db.Command.check')
     @patch('time.sleep')
-    def test_wait_for_db_delay(self ,patched_sleep):
+    def test_wait_for_db_delay(self ,patched_sleep,patched_check):
         """ Tests waiting for database when getting Operational Error"""
 
         patched_check.side_effect = [Psycopg2Error] * 2 + \
